@@ -1,0 +1,34 @@
+
+.title_page {
+    height: 60vh;
+    padding: 8%;
+    box-sizing: border-box;
+    animation: fade_in 1.5s;
+}
+
+.title_page h1 {
+    font-size: 80px;
+    color: rgba(0, 5, 20, 0.8);
+    letter-spacing: 2px;
+    animation: title 0.8s cubic-bezier(0, 0.5, 0, 1);
+}
+
+.title_page p {
+    width: 70%;
+    font-size: 23px;
+    letter-spacing: 0.3px;
+    color: rgba(0, 0, 20, 0.6);
+    animation: subtitle 0.8s cubic-bezier(0, 0.5, 0, 1);
+}
+
+@keyframes title {
+    0% { opacity: 0; }
+    20% { opacity: 0; transform: translate(-50px, 600px); }
+    100% { opacity: 1; transform: none; }
+}
+
+@keyframes subtitle {
+    0% { opacity: 0; }
+    30% { opacity: 0; transform: translate(-50px, 600px); }
+    100% { opacity: 1; transform: none; }
+}

@@ -1,24 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
+import {
+  TransitionGroup,
+  CSSTransition
+} from "react-transition-group";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+  useLocation,
+  withRouter,
+} from "react-router-dom";
+import SignIn from './components/SignIn';
+import Dashboard from './components/dashboard/Dashboard';
+
+const TransitionApp = withRouter(({ location }) => {
+  console.log(location);
+  return (<TransitionGroup>
+    <CSSTransition key={location.key} classNames="fade" timeout={0}>
+      <Switch location={location}>
+        <Route exact path="/">
+          <Redirect to="/signin" />
+        </Route>
+        <Route path="/signin">
+          <SignIn />
+        </Route>
+        <Route path="/dashboard">
+          <Dashboard />
+        </Route>
+      </Switch>
+    </CSSTransition>
+  </TransitionGroup>);
+});
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Redirect to="/signin" />
+          </Route>
+          <Route path="*">
+            <TransitionApp />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

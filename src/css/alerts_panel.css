@@ -1,0 +1,60 @@
+.alerts_panel {
+    width: 350px;
+    transform: translateX(350px) scale(1.05);
+    transform-origin: left;
+    box-sizing: border-box;
+    padding: 16px;
+    overflow-x: hidden;
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: rgb(42, 45, 51);
+    transition: 0.2s cubic-bezier(0.87, 0.12, 0.76, 0.89);
+    box-shadow: -5px 0px 60px rgba(0, 0, 0, 0.5), -5px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.alerts_panel h2 {
+    letter-spacing: 0.8px;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0px;
+}
+
+.alerts_panel .center {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alerts_panel .center p {
+    padding-bottom: 12vh;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    opacity: 0.7;
+}
+
+.black_overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.alerts_panel.open {
+    transform: none;
+    transition: 0.5s cubic-bezier(0.3, 0.74, 0, 1);
+}
+
+.black_overlay.open {
+    visibility: visible;
+    opacity: 1;
+}

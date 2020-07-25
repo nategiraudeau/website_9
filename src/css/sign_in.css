@@ -1,0 +1,91 @@
+.sign_in_form {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: slide_up 1s cubic-bezier(0.49, 0.79, 0, 1), fade_in 1s;
+}
+
+.sign_in_form h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2),
+                 0px 4px 20px rgba(255, 255, 255, 0.2),
+                 0px 6px 40px rgba(255, 255, 255, 0.3);
+    margin-bottom: 20px;
+}
+
+.sign_in_form form {
+    display: flex;
+    flex-direction: column;
+    animation: slide_up 1s cubic-bezier(0.49, 0.79, 0, 1), fade_in 1s;
+}
+
+.sign_in_form input {
+    min-width: 300px;
+    max-width: 90vw;
+}
+
+.sign_in_form input[type="submit"] {
+    animation: slide_up 1s cubic-bezier(0.49, 0.79, 0, 1), fade_in 1s;
+}
+
+input {
+    padding: 16px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    margin: 6px 0px;
+    border-radius: 8px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.15s;
+}
+
+input:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+}
+
+input[type='submit'] {
+    background-image: linear-gradient(145deg, #ffcc00, #ff8c00);
+    box-shadow: 0px 8px 88px #ffa70377,
+                0px 6px 16px #ffa7034b;
+    margin-top: 20px;
+    color: #000;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    transition: 0.2s;
+}
+
+a:hover input[type='submit'], input[type="submit"]:hover {
+    transform: translateY(-4px) scale(1.005);
+    box-shadow: 0px 12px 88px #ffa7038a,
+                0px 8px 16px #ffa7034b;
+}
+
+a:active input[type='submit'], input[type="submit"]:active {
+    transform: translateY(0.5px) scale(0.98);
+    box-shadow: 0px 12px 88px #ffa7038a,
+                0px 8px 16px #ffa7034b;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(255, 255, 255, 0.712);
+    opacity: 1;  /* Firefox */
+    font-weight: 400;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.712);
+    font-weight: 400;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.712);
+    font-weight: 400;
+  }
