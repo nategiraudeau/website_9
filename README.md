@@ -8,4 +8,5 @@ A dashboard built with reactjs.
 
 ---
 
-<img src="./website_9_recording.gif">
+<img src="./sh2.png">
+<img src="./sh1.png">
