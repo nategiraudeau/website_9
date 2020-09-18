@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import alertsDrawerImage from '../artwork/alerts_drawer_image.png';
 
 import '../css/alerts_panel.css';
 

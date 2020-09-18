@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import '../css/sign_in.css'
-import { Link, Redirect } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+
+// import { dbRoute } from '../App';
 
 function later(delay) {
     return new Promise(function (resolve) {
@@ -34,7 +36,7 @@ export default class SignIn extends Component {
                 toDashboard: false,
             });
             return (
-                <Redirect to="/dashboard" />
+                <Redirect exact to='dashboard' />
             )
         }
 

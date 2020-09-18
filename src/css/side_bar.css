@@ -71,14 +71,16 @@ hr {
     overflow: hidden;
     margin: 0;
     width: 100%;
-    transition: 0.4s cubic-bezier(0.48, 0.81, 0, 1);
+    transition: all 0.4s cubic-bezier(0.48, 0.81, 0, 1);
     visibility: hidden;
+    transform: translateX(-40px);
     opacity: 0;
 }
 
 .side_bar_link span.material-icons {
     transform: translateX(8px);
     transition: 0.4s cubic-bezier(0.48, 0.81, 0, 1);
+    z-index: 1;
 }
 
 .side_bar_logo {
@@ -161,6 +163,7 @@ hr {
     opacity: 1; 
     visibility: visible;
     margin-left: 12px;
+    transform: none;
 }
 
 .side_bar.extended .side_bar_link span.material-icons {

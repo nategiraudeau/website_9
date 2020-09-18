@@ -15,12 +15,16 @@ import {
 import SignIn from './components/SignIn';
 import Dashboard from './components/dashboard/Dashboard';
 
+function createPath(path) {
+  return process.env.PUBLIC_URL + path;
+}
+
 const TransitionApp = withRouter(({ location }) => {
   console.log(location);
   return (<TransitionGroup>
     <CSSTransition key={location.key} classNames="fade" timeout={0}>
       <Switch location={location}>
-        <Route exact path="/">
+        <Route exact path='/'>
           <Redirect to="/signin" />
         </Route>
         <Route path="/signin">
@@ -38,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/">
             <Redirect to="/signin" />

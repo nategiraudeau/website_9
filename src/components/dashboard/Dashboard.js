@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import '../../css/dashboard.css';
 import SideBar from './SideBar';
+// import { authRoute } from '../../App';
 import { Redirect } from 'react-router-dom';
 
 import userIcon from "../../artwork/user_icon-05.png";
@@ -110,9 +111,9 @@ export default class Dashboard extends Component {
                                     <td>12:00 PM</td>
                                 </tr>
                                 <tr>
-                                    <td>Go to church</td>
+                                    <td>Mow the lawn</td>
                                     <td>Sunday</td>
-                                    <td>11:00 AM</td>
+                                    <td>3:00 PM</td>
                                 </tr>
                                 <tr>
                                     <td>Wake up</td>
@@ -122,9 +123,6 @@ export default class Dashboard extends Component {
                             </table>
                         </div>
                     </div>
-                    <footer>
-                        <h1>Website 9</h1>
-                    </footer>
                 </div>
                 <AlertsPanel close={() => this.closeAlerts()} open={this.state.showAlerts} />
             </div>
