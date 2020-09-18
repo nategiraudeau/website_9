@@ -2,7 +2,7 @@
 
 ## [Website 9](https://nategiraudeau.github.io/website_9)
 
-A dashboard built with reactjs.
+A dashboard template built with reactjs.
 
 [Click Here to visit website 9](https://nategiraudeau.github.io/website_9)
 
