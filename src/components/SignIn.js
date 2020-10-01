@@ -51,6 +51,7 @@ export default class SignIn extends Component {
                     <input required placeholder="Password" type="password" />
                     <input type="submit" value="Sign In" />
                 </form>
+                <button onClick={(e) => this.onSubmit(e)} className="skip-signin">Skip</button>
             </div>
         )
     }
