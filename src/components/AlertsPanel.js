@@ -17,7 +17,7 @@ export default class AlertsPanel extends Component {
                     </div>
                     <hr />
                     <div className="center">
-                        <p>You Don't have any alerts</p>
+                        <p>You don't have any alerts</p>
                     </div>
                 </div>
             </div>
